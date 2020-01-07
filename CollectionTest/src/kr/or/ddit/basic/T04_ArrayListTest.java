@@ -1,6 +1,5 @@
 package kr.or.ddit.basic;
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 
 
 public class T04_ArrayListTest {
@@ -16,7 +15,7 @@ public class T04_ArrayListTest {
 		ArrayList<String> aliasList = new ArrayList<String>();
 		Scanner scan = new Scanner(System.in);
 		
-		/*// 문제1)
+		// 문제1)
 		System.out.println("서로 다른 길이의 별명 5개를 입력하세요.");
 		for(int i=1; i<=5; i++){
 			System.out.print(i + "번째 별명 : ");
@@ -37,7 +36,7 @@ public class T04_ArrayListTest {
 		
 		System.out.println("제일 긴 별명 : " + maxAlias);
 		
-		*/
+		
 		
 		// 문제2)
 		System.out.println("별명 5개를 입력하세요.");

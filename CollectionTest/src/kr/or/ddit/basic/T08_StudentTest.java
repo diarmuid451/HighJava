@@ -19,6 +19,7 @@ public class T08_StudentTest {
 		memList.add(new Student(109,"이순신", 95, 80, 75));
 		memList.add(new Student(104,"변학도", 65, 70, 82));
 		memList.add(new Student(101,"홍길동", 80, 45, 65));
+		memList.add(new Student(106,"고길동", 45, 65, 80));
 		for (int i =0; i<memList.size(); i++) {
 			memList.get(i).setRank(1);
 			for (int j=0; j<memList.size(); j++) {
