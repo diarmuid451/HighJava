@@ -1,8 +1,8 @@
-package kr.or.ddit.basic;
+package exam;
 
 import java.util.*;
 
-public class T13_LottoTest {
+public class LottoTest {
 
 	public static void main(String[] args) {
 		
