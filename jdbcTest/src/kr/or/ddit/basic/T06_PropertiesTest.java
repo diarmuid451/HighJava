@@ -26,6 +26,7 @@ public class T06_PropertiesTest {
 		//읽어온 자료 출력하기
 		
 		//key값만 읽어와 Enumeration객체로 변환한다.
+		@SuppressWarnings("unchecked")
 		Enumeration<String> keys = (Enumeration<String>)prop.propertyNames();
 		
 		//key값 개수만큼 반복해서 값 출력하기

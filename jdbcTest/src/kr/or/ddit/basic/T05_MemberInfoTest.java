@@ -97,7 +97,7 @@ public class T05_MemberInfoTest {
 		String memId = scan.next();
 		
 		
-			conn = DBUtil2.getConnection();
+			conn = DBUtil3.getConnection();
 			String sql = "delete from mymember where mem_id = ?";
 			
 			pstmt = conn.prepareStatement(sql);
@@ -146,7 +146,7 @@ public class T05_MemberInfoTest {
 		String memAddr = scan.next();
 		
 		
-			conn = DBUtil2.getConnection();
+			conn = DBUtil3.getConnection();
 			
 			String sql = "update mymember set mem_name = ?, mem_tel = ?, mem_addr = ? where mem_id = ?";
 			
@@ -175,7 +175,7 @@ public class T05_MemberInfoTest {
 		System.out.println("\r\n------------------------------------------");
 		System.out.println("ID\t이름\t전화번호\t"+"\t주소");
 		
-			conn = DBUtil2.getConnection();
+			conn = DBUtil3.getConnection();
 			
 			String sql = "select * from  mymember";
 			stmt = conn.createStatement();
@@ -225,7 +225,7 @@ public class T05_MemberInfoTest {
 		String memAddr = scan.nextLine();
 		
 		
-			conn = DBUtil2.getConnection();
+			conn = DBUtil3.getConnection();
 			String sql = "insert into mymember values (?, ?, ?, ?)";
 			
 			pstmt = conn.prepareStatement(sql);
@@ -256,7 +256,7 @@ public class T05_MemberInfoTest {
 		
 		boolean chk = false;
 		
-			conn = DBUtil2.getConnection();
+			conn = DBUtil3.getConnection();
 			String sql = "select count(*) cnt from mymember where mem_id = ?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, memId);

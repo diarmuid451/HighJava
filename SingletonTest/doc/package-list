@@ -1,0 +1,10 @@
+exam.board.VO
+exam.board.controller
+exam.board.dao
+exam.board.service
+kr.or.ddit.basic
+kr.or.ddit.member
+kr.or.ddit.member.dao
+kr.or.ddit.member.service
+kr.or.ddit.member.vo
+kr.or.ddit.util
