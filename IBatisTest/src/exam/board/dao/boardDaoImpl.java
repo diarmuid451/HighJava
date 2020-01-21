@@ -11,16 +11,13 @@ import com.ibatis.common.resources.*;
 import com.ibatis.sqlmap.client.*;
 
 import exam.board.VO.*;
-import kr.or.ddit.member.dao.*;
 
 public class boardDaoImpl implements boardDao {
 	
 	//log4j를 이용해서 로그를 출력
 	private static final Logger sqlLogger = Logger.getLogger("log4jexam.sql.Query");
 	private static final Logger paramLogger = Logger.getLogger("log4jexam.sql.Parameter");
-	private static final Logger resultLogger = Logger.getLogger(MemberDaoImpl.class);	
-	private static final String obj = null;
-
+	private static final Logger resultLogger = Logger.getLogger(boardDaoImpl.class);
 
 	private static boardDaoImpl dao;
 	private SqlMapClient smc;
@@ -34,6 +31,8 @@ public class boardDaoImpl implements boardDao {
 			rd = Resources.getResourceAsReader("SqlMapConfig2.xml");
 			smc = SqlMapClientBuilder.buildSqlMapClient(rd);
 			rd.close();
+			
+			sqlLogger.debug(smc);
 		} catch (IOException e) {
 			System.out.println("SqlMapClient 객체 생성 실패");
 			e.printStackTrace();
@@ -59,11 +58,12 @@ public class boardDaoImpl implements boardDao {
 			
 			
 			Object obj = smc.insert("board.insertBoard", bvo);
+			paramLogger.warn(obj);
 			if(obj == null) {
 				cnt = 1;
 			}
 			
-			
+			resultLogger.fatal(cnt);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
