@@ -8,5 +8,95 @@ package kr.or.ddit.basic;
  */
 
 public class T13_ThreadStopTest {
+	public static void main(String[] args) {
+		ThreadStopEx1 th = new ThreadStopEx1();
+		th.start();
+		
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+//		th.stop();
+		th.setStop(true);
+		
+		//interrupt()메서드를 이용한 쓰레드 멈추기
+		ThreadStopEx2 th2 = new ThreadStopEx2();
+		th2.start();
+		
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		th2.interrupt(); //인터럽트 걸기
+	}
+}
 
+/**
+ * 상태 플래그를 활용한 쓰레드 멈추기
+ * @author PC-01
+ *
+ */
+class ThreadStopEx1 extends Thread {
+	private boolean stop;
+	
+	public void setStop(boolean stop) {
+		this.stop = stop;
+	}
+
+	@Override
+		public void run() {
+			while(!stop) {
+				System.out.println("쓰레드 처리중..");
+			}
+			System.out.println("자원 정리중");
+			System.out.println("실행 종료");
+			
+	}
+}
+
+/**
+ * interrupt()메서드를 이용하여 쓰레드를 멈추게 하는 방법
+ * @author PC-01
+ *
+ */
+class ThreadStopEx2 extends Thread {
+	@Override
+	public void run() {
+/*		//방법1 >> sleep()메서드나 join()메서드 등을 사용할 때
+		//		  interrupt()메서드를 호출하면 InterruptedException이 발생한다.
+		try {
+			while(true) {
+				System.out.println("쓰레드 처리중....");
+				Thread.sleep(1);
+			}
+		} catch (InterruptedException e) {
+		
+		} 
+*/		
+		
+		//방법2 >> interrupt()메서드가 호출 되었는지 검사하기
+		while(true) {
+			System.out.println("쓰레드 처리중..!!");
+			
+		//검사방법1 >> 쓰레드의 인스턴스용 메서드를 이용하는 방법
+		if(this.isInterrupted()) {
+			System.out.println("인스턴스용 isInterrupted()");
+			break;
+		}
+		
+/*		//검사방법2 >> 쓰레드의 정적 메서드를 이용하는 방법
+		if(Thread.interrupted()) { //interrupted()메서드가 호출되면 true
+			System.out.println("정적 메서드 interrupted()");
+			break;
+			
+		} 
+*/		
+	}
+		
+		System.out.println("자원 정리 중");
+		System.out.println("실행 종료");
+	
+	}
 }
