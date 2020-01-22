@@ -2,7 +2,7 @@ package exam;
 
 import java.util.*;
 
-//만드는 과정에서 많은 실패를 맛보아서 나쁜말이라는 이름이 되었습니다.
+
 public class RunningHorse {
 
     public static void main(String[] args) {

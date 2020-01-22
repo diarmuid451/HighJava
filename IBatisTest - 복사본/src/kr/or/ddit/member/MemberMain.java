@@ -249,7 +249,7 @@ public class MemberMain {
 	}
 	
 	
-	private void searchMember() {
+	public void searchMember() {
 		// 검색할 회원ID, 회원이름, 전화번호, 주소등을 입력하면
 		// 입력한 정보만 사용하여 검색하는 기능을 구현하시오.
 		// 주소는 입력한 값이 포함만 되어도 검색 되도록 한다.

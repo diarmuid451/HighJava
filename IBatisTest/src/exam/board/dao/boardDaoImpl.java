@@ -32,7 +32,7 @@ public class boardDaoImpl implements boardDao {
 			smc = SqlMapClientBuilder.buildSqlMapClient(rd);
 			rd.close();
 			
-			sqlLogger.debug(smc);
+			
 		} catch (IOException e) {
 			System.out.println("SqlMapClient 객체 생성 실패");
 			e.printStackTrace();
@@ -58,12 +58,12 @@ public class boardDaoImpl implements boardDao {
 			
 			
 			Object obj = smc.insert("board.insertBoard", bvo);
-			paramLogger.warn(obj);
+			
 			if(obj == null) {
 				cnt = 1;
 			}
 			
-			resultLogger.fatal(cnt);
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -93,18 +93,9 @@ public class boardDaoImpl implements boardDao {
 		
 		try {
 			
-			Charset charset = Charset.forName("UTF-8");
-			Resources.setCharset(charset);
-			Reader rd = Resources.getResourceAsReader("SqlMapConfig2.xml");
-			
-			
-			SqlMapClient smc = SqlMapClientBuilder.buildSqlMapClient(rd);
-			
-			rd.close();
-			
 			bList = smc.queryForList("board.getAllBoard");
 					
-			} catch (SQLException | IOException e) {
+			} catch (SQLException e) {
 				e.printStackTrace();
 			}
 		
