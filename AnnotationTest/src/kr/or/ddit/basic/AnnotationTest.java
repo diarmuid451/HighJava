@@ -2,7 +2,7 @@ package kr.or.ddit.basic;
 
 import java.lang.reflect.*;
 
-public class AnnotationTEst {
+public class AnnotationTest {
 
 	public static void main(String[] args) {
 		System.out.println("id = "+PrintAnnotation.id);
