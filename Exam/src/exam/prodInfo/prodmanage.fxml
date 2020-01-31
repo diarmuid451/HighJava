@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <HBox alignment="CENTER" prefHeight="30.0" prefWidth="600.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <ComboBox fx:id="cprod_lgu" prefHeight="30.0" prefWidth="150.0" />
+            <ComboBox fx:id="cprod_name" prefHeight="30.0" prefWidth="279.0" />
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="PROD_ID" prefWidth="75.0" text="PROD_ID" />
+          <TableColumn fx:id="PROD_NAME" prefWidth="75.0" text="PROD_NAME" />
+            <TableColumn fx:id="PROD_LGU" prefWidth="75.0" text="PROD_LGU" />
+            <TableColumn fx:id="PROD_BUYER" prefWidth="75.0" text="PROD_BUYER" />
+            <TableColumn fx:id="PROD_COST" prefWidth="75.0" text="PROD_COST" />
+            <TableColumn fx:id="PROD_PRICE" prefWidth="75.0" text="PROD_PRICE" />
+            <TableColumn fx:id="PROD_SALE" prefWidth="75.0" text="PROD_SALE" />
+            <TableColumn fx:id="PROD_OUTLINE" prefWidth="75.0" text="PROD_OUTLINE" />
+            <TableColumn fx:id="PROD_DETAIL" prefWidth="75.0" text="PROD_DETAIL" />
+            <TableColumn fx:id="PROD_IMG" prefWidth="75.0" text="PROD_IMG" />
+            <TableColumn fx:id="PROD_TOTALSTOCK" prefWidth="75.0" text="PROD_TOTALSTOCK" />
+            <TableColumn fx:id="PROD_INSDATE" prefWidth="75.0" text="PROD_INSDATE" />
+            <TableColumn fx:id="PROD_PROPERSTOCK" prefWidth="75.0" text="PROD_PROPERSTOCK" />
+            <TableColumn fx:id="PROD_SIZE" prefWidth="75.0" text="PROD_SIZE" />
+            <TableColumn fx:id="PROD_COLOR" prefWidth="75.0" text="PROD_COLOR" />
+            <TableColumn fx:id="PROD_DELIVERY" prefWidth="75.0" text="PROD_DELIVERY" />
+            <TableColumn fx:id="PROD_UNIT" prefWidth="75.0" text="PROD_UNIT" />
+            <TableColumn fx:id="PROD_QTYIN" prefWidth="75.0" text="PROD_QTYIN" />
+            <TableColumn fx:id="PROD_QTYSALE" prefWidth="75.0" text="PROD_QTYSALE" />
+            <TableColumn fx:id="PROD_MILEAGE" prefWidth="75.0" text="PROD_MILEAGE" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView layoutX="1.0" layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="600.0">
+         <columns>
+            <TableColumn minWidth="-Infinity" prefWidth="150.0" text="이름" />
+            <TableColumn minWidth="-Infinity" prefWidth="150.0" text="국어" />
+            <TableColumn minWidth="-Infinity" prefWidth="150.0" text="수학" />
+            <TableColumn minWidth="-Infinity" prefWidth="150.0" text="영어" />
+         </columns>
+      </TableView>
+      <HBox alignment="CENTER" layoutX="1.0" layoutY="318.0" prefHeight="90.0" prefWidth="600.0">
+         <children>
+            <Button mnemonicParsing="false" prefWidth="50.0" text="추가">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" text="학생별 막대그래프" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
