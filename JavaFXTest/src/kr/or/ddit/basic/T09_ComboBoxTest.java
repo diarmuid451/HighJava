@@ -51,7 +51,7 @@ public class T09_ComboBoxTest extends Application{
 			@Override
 			public void handle(ActionEvent event) {
 				if(combo.getValue() != null && combo2.getValue() != null) {
-					txtArea.setText(combo.getValue()+ "지역에는" + combo2.getValue()+"가 유명합니다.");
+					txtArea.setText(combo.getValue()+ "지역에는 " + combo2.getValue()+"(이)가 유명합니다.");
 				}
 				
 			}

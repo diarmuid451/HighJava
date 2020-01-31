@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox  alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="505.0" prefWidth="621.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.member.MemberMVC_controller">
+   <children>
+      <GridPane alignment="CENTER" maxHeight="200.0" maxWidth="375.0" prefHeight="115.0" prefWidth="243.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="61.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="314.0" minWidth="10.0" prefWidth="314.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="id" promptText="회원 ID" GridPane.columnIndex="1" />
+            <Label alignment="CENTER_RIGHT" prefHeight="15.0" prefWidth="56.0" text="회원 ID :" textAlignment="RIGHT" />
+            <Label alignment="CENTER_RIGHT" prefHeight="15.0" prefWidth="56.0" text="회원이름 :" GridPane.rowIndex="1" />
+            <Label alignment="CENTER_RIGHT" prefHeight="15.0" prefWidth="56.0" text="회원전화 :" GridPane.rowIndex="2" />
+            <Label alignment="CENTER_RIGHT" prefHeight="15.0" prefWidth="56.0" text="회원주소 :" GridPane.rowIndex="3" />
+            <TextField fx:id="name" promptText="회원 이름" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="tel" promptText="회원 전화" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="addr" promptText="회원 주소" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <FlowPane alignment="CENTER" columnHalignment="CENTER" prefHeight="52.0" prefWidth="470.0">
+         <children>
+            <Button fx:id="btnAdd" lineSpacing="10.0" maxHeight="100.0" maxWidth="300.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="70.0" text="추 가" textAlignment="CENTER" onAction="#btnAddClick">
+               <FlowPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </FlowPane.margin>
+            </Button>
+            <Button fx:id="btnUpd" maxHeight="100.0" maxWidth="300.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="70.0" text="수 정" textAlignment="CENTER" onAction="#btnUpdClick">
+               <FlowPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </FlowPane.margin>
+            </Button>
+            <Button fx:id="btnDel" maxHeight="100.0" maxWidth="300.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="70.0" text="삭 제" textAlignment="CENTER" onAction="#btnDelClick">
+               <FlowPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </FlowPane.margin>
+            </Button>
+            <Button fx:id="btnConf" disable="true" maxHeight="100.0" maxWidth="300.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="70.0" text="확 인" textAlignment="CENTER" onAction="#btnConfClick">
+               <FlowPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </FlowPane.margin>
+            </Button>
+            <Button fx:id="btnCan" disable="true" maxHeight="100.0" maxWidth="300.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="70.0" text="취 소" textAlignment="CENTER" onAction="#btnCanClick">
+               <FlowPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </FlowPane.margin>
+            </Button>
+         </children>
+      </FlowPane>
+      <TableView fx:id="table" prefHeight="343.0" prefWidth="601.0">
+        <columns>
+          <TableColumn fx:id="mem_id" prefWidth="84.0" text="회원ID" />
+          <TableColumn fx:id="mem_name" prefWidth="254.0" text="회원이름" />
+            <TableColumn fx:id="mem_tel" prefWidth="131.0" text="회원전화" />
+            <TableColumn fx:id="mem_addr" prefWidth="131.0" text="회원주소" />
+        </columns>
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+      </TableView>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

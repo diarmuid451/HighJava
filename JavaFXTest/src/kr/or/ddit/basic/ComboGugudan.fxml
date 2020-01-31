@@ -11,7 +11,7 @@
       <HBox spacing="10.0" BorderPane.alignment="CENTER">
          <children>
             <ComboBox fx:id="cmbDan" prefWidth="150.0" />
-            <Button fx:id="btnDan" mnemonicParsing="false" text="출력" onAction="#btnDanClicked" />
+            <Button fx:id="btnDan" mnemonicParsing="false" text="출력1" onAction="#btnDanClicked" />
          </children>
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
