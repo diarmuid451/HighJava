@@ -20,8 +20,9 @@
 	표시하기 위해서 alias를 지정할 수 있다.
 	형식) <typeAlias alias="alias명" type="클래스의 풀네임"/>
 	 -->
-	<typeAlias alias="memVO" type="exam.zipcode.vo.MemberVO"/>
-
+	<typeAlias alias="zipcodeVO" type="exam.zipcode.vo.ZipCodeVO"/>
+	<typeAlias alias="prodVO" type="exam.prodInfo.vo.ProdVO"/>
+	<typeAlias alias="appVO" type="exam.app.vo.AppVO"/>
 	<!-- 
 	DB와의 연결을 처리하는 부분
 	SqlMapConfig.properties에 설정해 놓은 정보를 이용하여 구성한다.
@@ -45,7 +46,9 @@
 	형식) <sqlMap resource="경로명/파일명.xml"/> 
 	-->
 	
-	<sqlMap resource="exam/zipcode/sql/member2.xml"/>
+	<sqlMap resource="exam/zipcode/sql/zipcode.xml"/>
+	<sqlMap resource="exam/prodInfo/sql/prod.xml"/>
+	<sqlMap resource="exam/app/sql/app.xml"/>
 </sqlMapConfig>
 
 

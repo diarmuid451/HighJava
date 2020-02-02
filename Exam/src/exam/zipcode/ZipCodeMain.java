@@ -5,12 +5,12 @@ import javafx.fxml.*;
 import javafx.scene.*;
 import javafx.stage.*;
 
-public class MemberMVCMain extends Application{
+public class ZipCodeMain extends Application{
 
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		Parent root = FXMLLoader.load(getClass().getResource("MemberMVCMain.fxml"));
+		Parent root = FXMLLoader.load(getClass().getResource("searchZipCode.fxml"));
 		
 		Scene scene = new Scene(root);
 		primaryStage.setTitle("MemberMVCMain.fxml");
