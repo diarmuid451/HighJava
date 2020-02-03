@@ -2,8 +2,8 @@ package exam.app.service;
 
 import java.util.*;
 
-import exam.app.dao.AppDao;
-import exam.app.dao.AppDaoImpl;
+import exam.app.dao.*;
+import exam.app.vo.*;
 
 
 
@@ -23,6 +23,16 @@ public class AppServiceImpl implements AppService {
 			service = new AppServiceImpl();
 		}
 		return service;
+	}
+
+	@Override
+	public List<AppVO> getAllMember(AppVO vo) {
+		return appDao.getAllMember(vo);
+	}
+
+	@Override
+	public void insertMember(AppVO vo) {
+		appDao.insertMember(vo);
 	}
 	
 }

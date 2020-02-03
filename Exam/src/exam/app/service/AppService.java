@@ -2,7 +2,7 @@ package exam.app.service;
 
 import java.util.*;
 
-import exam.zipcode.vo.*;
+import exam.app.vo.*;
 
 
 
@@ -14,6 +14,8 @@ import exam.zipcode.vo.*;
  */
 public interface AppService {
 	
+	public List<AppVO> getAllMember(AppVO vo);
 	
+	public void insertMember(AppVO vo);
 	
 }

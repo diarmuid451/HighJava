@@ -2,7 +2,7 @@ package exam.app.dao;
 
 import java.util.*;
 
-import exam.zipcode.vo.*;
+import exam.app.vo.*;
 
 /**
  * @author PC-01
@@ -10,5 +10,7 @@ import exam.zipcode.vo.*;
  */
 public interface AppDao {
 	
+	public List<AppVO> getAllMember(AppVO vo);
 	
+	public void insertMember(AppVO vo);
 }

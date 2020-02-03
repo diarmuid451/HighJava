@@ -10,10 +10,10 @@ public class AppMain extends Application{
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		Parent root = FXMLLoader.load(getClass().getResource("searchZipCode.fxml"));
+		Parent root = FXMLLoader.load(getClass().getResource("AppMain.fxml"));
 		
 		Scene scene = new Scene(root);
-		primaryStage.setTitle("MemberMVCMain.fxml");
+		primaryStage.setTitle("AppMain");
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		

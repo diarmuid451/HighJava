@@ -9,83 +9,64 @@ package exam.app.vo;
  * </p> 
  */
 public class AppVO {
-	private String mem_id; //아이디
-	private String mem_name; //이름
-	private String mem_tel; //전화번호
-	private String mem_addr; //주소
-	
+	private String name;
+	private int Korean;
+	private int Math;
+	private int English;
 	
 	
 	public AppVO() {
 		super();
-		
 	}
 
 
-
-	public AppVO(String mem_id, String mem_name, String mem_tel, String mem_addr) {
+	public AppVO(String name, int korean, int math, int english) {
 		super();
-		this.mem_id = mem_id;
-		this.mem_name = mem_name;
-		this.mem_tel = mem_tel;
-		this.mem_addr = mem_addr;
+		this.name = name;
+		Korean = korean;
+		Math = math;
+		English = english;
 	}
 
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	public int getKorean() {
+		return Korean;
+	}
+
+
+	public void setKorean(int korean) {
+		Korean = korean;
+	}
+
+
+	public int getMath() {
+		return Math;
+	}
+
+
+	public void setMath(int math) {
+		Math = math;
+	}
+
+
+	public int getEnglish() {
+		return English;
+	}
+
+
+	public void setEnglish(int english) {
+		English = english;
+	}
 	
-	
-	public String getMem_id() {
-		return mem_id;
-	}
-
-
-
-	public void setMem_id(String mem_id) {
-		this.mem_id = mem_id;
-	}
-
-
-
-	public String getMem_name() {
-		return mem_name;
-	}
-
-
-
-	public void setMem_name(String mem_name) {
-		this.mem_name = mem_name;
-	}
-
-
-
-	public String getMem_tel() {
-		return mem_tel;
-	}
-
-
-
-	public void setMem_tel(String mem_tel) {
-		this.mem_tel = mem_tel;
-	}
-
-
-
-	public String getMem_addr() {
-		return mem_addr;
-	}
-
-
-
-	public void setMem_addr(String mem_addr) {
-		this.mem_addr = mem_addr;
-	}
-
-
-
-	@Override
-	public String toString() {
-		return "MemberVO [mem_id=" + mem_id + ", mem_name=" + mem_name + ", mem_tel=" + mem_tel + ", mem_addr="
-				+ mem_addr + "]";
-	}
-		
 	
 }

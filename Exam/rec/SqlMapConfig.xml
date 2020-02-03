@@ -22,7 +22,6 @@
 	 -->
 	<typeAlias alias="zipcodeVO" type="exam.zipcode.vo.ZipCodeVO"/>
 	<typeAlias alias="prodVO" type="exam.prodInfo.vo.ProdVO"/>
-	<typeAlias alias="appVO" type="exam.app.vo.AppVO"/>
 	<!-- 
 	DB와의 연결을 처리하는 부분
 	SqlMapConfig.properties에 설정해 놓은 정보를 이용하여 구성한다.
@@ -48,7 +47,6 @@
 	
 	<sqlMap resource="exam/zipcode/sql/zipcode.xml"/>
 	<sqlMap resource="exam/prodInfo/sql/prod.xml"/>
-	<sqlMap resource="exam/app/sql/app.xml"/>
 </sqlMapConfig>
 
 
