@@ -2,7 +2,7 @@ package exam.prodInfo.service;
 
 import java.util.*;
 
-import exam.zipcode.vo.*;
+import exam.prodInfo.vo.*;
 
 
 
@@ -13,6 +13,10 @@ import exam.zipcode.vo.*;
  *
  */
 public interface ProdService {
+
+	List<lProdVO> combo1List();
+
+	List<ProdVO> combo2List(String mv);
 	
 	
 	

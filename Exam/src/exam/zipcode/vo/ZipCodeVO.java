@@ -13,10 +13,8 @@ public class ZipCodeVO {
 	private String sido;
 	private String gugun;
 	private String dong;
-	private String ri;
-	private String bldg;
 	private String bunji;
-	private int seq;
+	
 	
 	
 	public ZipCodeVO() {
@@ -24,17 +22,13 @@ public class ZipCodeVO {
 	}
 
 
-	public ZipCodeVO(String zipcode, String sido, String gugun, String dong, String ri, String bldg, String bunji,
-			int seq) {
+	public ZipCodeVO(String zipcode, String sido, String gugun, String dong, String bunji) {
 		super();
 		this.zipcode = zipcode;
 		this.sido = sido;
 		this.gugun = gugun;
 		this.dong = dong;
-		this.ri = ri;
-		this.bldg = bldg;
 		this.bunji = bunji;
-		this.seq = seq;
 	}
 
 
@@ -78,26 +72,6 @@ public class ZipCodeVO {
 	}
 
 
-	public String getRi() {
-		return ri;
-	}
-
-
-	public void setRi(String ri) {
-		this.ri = ri;
-	}
-
-
-	public String getBldg() {
-		return bldg;
-	}
-
-
-	public void setBldg(String bldg) {
-		this.bldg = bldg;
-	}
-
-
 	public String getBunji() {
 		return bunji;
 	}
@@ -107,16 +81,4 @@ public class ZipCodeVO {
 		this.bunji = bunji;
 	}
 
-
-	public int getSeq() {
-		return seq;
-	}
-
-
-	public void setSeq(int seq) {
-		this.seq = seq;
-	}
-	
-	
-	
 }

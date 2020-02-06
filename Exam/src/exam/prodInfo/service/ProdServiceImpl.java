@@ -2,10 +2,8 @@ package exam.prodInfo.service;
 
 import java.util.*;
 
-import exam.prodInfo.dao.ProdDao;
-import exam.prodInfo.dao.ProdDaoImpl;
-import exam.zipcode.dao.*;
-import exam.zipcode.vo.*;
+import exam.prodInfo.dao.*;
+import exam.prodInfo.vo.*;
 
 
 public class ProdServiceImpl implements ProdService {
@@ -26,4 +24,13 @@ public class ProdServiceImpl implements ProdService {
 		return service;
 	}
 	
+	@Override
+	public List<lProdVO> combo1List() {
+		return prodDao.combo1List();
+	}
+
+	@Override
+	public List<ProdVO> combo2List(String mv) {
+		return prodDao.combo2List(mv);
+	}
 }

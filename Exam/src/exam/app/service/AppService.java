@@ -14,7 +14,7 @@ import exam.app.vo.*;
  */
 public interface AppService {
 	
-	public List<AppVO> getAllMember(AppVO vo);
+	public List<AppVO> getAllMember();
 	
 	public void insertMember(AppVO vo);
 	

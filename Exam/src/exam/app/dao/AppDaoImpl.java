@@ -22,7 +22,7 @@ public class AppDaoImpl implements AppDao {
 
 
 @Override
-public List<AppVO> getAllMember(AppVO vo) {
+public List<AppVO> getAllMember() {
 	
 	List<AppVO> allList = new ArrayList<AppVO>();
 	

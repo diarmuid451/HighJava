@@ -1,5 +1,9 @@
 package exam.zipcode.service;
 
+import java.util.*;
+
+import exam.zipcode.vo.*;
+
 /**
  * @author PC-01
  * Service객체는 Dao에 설정된 메서드를 원하는 작업에 맞게 호출하여 결과를 받아오고,
@@ -8,5 +12,5 @@ package exam.zipcode.service;
  */
 public interface ZipCodeService {
 	
-
+	List<ZipCodeVO> getSearchZip(String comGet, String txtGet);
 }

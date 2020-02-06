@@ -55,7 +55,8 @@ public class AppMain_controller implements Initializable {
     	try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("exam.AddOn.fxml"));
 			Parent parent = loader.load();
-		
+			
+			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -87,6 +88,9 @@ public class AppMain_controller implements Initializable {
 		Math.setCellValueFactory(new PropertyValueFactory<>("Math"));
 		Eng.setCellValueFactory(new PropertyValueFactory<>("Eng"));
 		
+		data = FXCollections.observableArrayList(appService.getAllMember());
+		
+		tableView.getItems().addAll(data);
 		//테이블의 값 선택시 파이그래프가 나오도록 하는 메서드
 		tableView.setOnMouseClicked(e -> {
 			if(tableView.getSelectionModel().isEmpty()) {
@@ -102,11 +106,13 @@ public class AppMain_controller implements Initializable {
 	private void piechart(AppVO appVO) {
 		PieChart pieChart = new PieChart();
 		
-		ObservableList<PieChart, Data> pieChartData = FXCollections.observableArrayList();
+		ObservableList<AppVO> pieChartData = FXCollections.observableArrayList(appVO);
+		
+		
 		
 		pieChart.setTitle("파이 그래프");
 		pieChart.setLegendSide(Side.BOTTOM);
-		pieChart.setData(pieChartData);
+		pieChart.setUserData(pieChartData);
 		
 		
 		

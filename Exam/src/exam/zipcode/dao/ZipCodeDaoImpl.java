@@ -2,9 +2,13 @@ package exam.zipcode.dao;
 
 import java.io.*;
 import java.nio.charset.*;
+import java.sql.*;
+import java.util.*;
 
 import com.ibatis.common.resources.*;
 import com.ibatis.sqlmap.client.*;
+
+import exam.zipcode.vo.*;
 
 
 public class ZipCodeDaoImpl implements ZipCodeDao {
@@ -37,5 +41,24 @@ public class ZipCodeDaoImpl implements ZipCodeDao {
 	}	
 		
 	
+	@Override
+	public List<ZipCodeVO> getSearchZip(String comGet, String txtGet) {
+		
+		List<ZipCodeVO> zipList = new ArrayList<>();
+		
+		try {
+			if(comGet.equals("우편번호")) {
+				zipList = smc.queryForList("zipcode.getZip", txtGet);
+			}else if(comGet.equals("동이름")) {
+				zipList = smc.queryForList("zipcode.getDong", txtGet);
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return zipList;
+		
+	}	
 	
 }

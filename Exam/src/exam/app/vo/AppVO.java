@@ -10,9 +10,9 @@ package exam.app.vo;
  */
 public class AppVO {
 	private String name;
-	private int Korean;
+	private int Kor;
 	private int Math;
-	private int English;
+	private int Eng;
 	
 	
 	public AppVO() {
@@ -20,12 +20,12 @@ public class AppVO {
 	}
 
 
-	public AppVO(String name, int korean, int math, int english) {
+	public AppVO(String name, int kor, int math, int eng) {
 		super();
 		this.name = name;
-		Korean = korean;
-		Math = math;
-		English = english;
+		this.Kor = kor;
+		this.Math = math;
+		this.Eng = eng;
 	}
 
 
@@ -39,13 +39,13 @@ public class AppVO {
 	}
 
 
-	public int getKorean() {
-		return Korean;
+	public int getKor() {
+		return Kor;
 	}
 
 
-	public void setKorean(int korean) {
-		Korean = korean;
+	public void setKor(int kor) {
+		Kor = kor;
 	}
 
 
@@ -59,14 +59,16 @@ public class AppVO {
 	}
 
 
-	public int getEnglish() {
-		return English;
+	public int getEng() {
+		return Eng;
 	}
 
 
-	public void setEnglish(int english) {
-		English = english;
+	public void setEng(int eng) {
+		Eng = eng;
 	}
+	
+	
 	
 	
 }

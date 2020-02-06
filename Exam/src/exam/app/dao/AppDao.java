@@ -10,7 +10,7 @@ import exam.app.vo.*;
  */
 public interface AppDao {
 	
-	public List<AppVO> getAllMember(AppVO vo);
+	public List<AppVO> getAllMember();
 	
 	public void insertMember(AppVO vo);
 }

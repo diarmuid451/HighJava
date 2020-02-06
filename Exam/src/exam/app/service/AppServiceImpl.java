@@ -26,8 +26,8 @@ public class AppServiceImpl implements AppService {
 	}
 
 	@Override
-	public List<AppVO> getAllMember(AppVO vo) {
-		return appDao.getAllMember(vo);
+	public List<AppVO> getAllMember() {
+		return appDao.getAllMember();
 	}
 
 	@Override

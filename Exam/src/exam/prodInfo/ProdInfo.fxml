@@ -4,13 +4,12 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="exam.prodInfo.controller.ProdInfo_controller">
    <top>
       <HBox alignment="CENTER" prefHeight="30.0" prefWidth="600.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <ComboBox fx:id="cprod_lgu" prefHeight="30.0" prefWidth="150.0" />
-            <ComboBox fx:id="cprod_name" prefHeight="30.0" prefWidth="279.0" />
+            <ComboBox fx:id="clprod_gu" onAction="#selectedbox1" prefHeight="30.0" prefWidth="150.0" />
+            <ComboBox fx:id="cprod_name" onAction="#selectedbox2" prefHeight="30.0" prefWidth="279.0" />
          </children>
       </HBox>
    </top>
