@@ -48,8 +48,8 @@
 	-->
 	
 	<sqlMap resource="exam/zipcode/sql/zipcode.xml"/>
-	<!-- <sqlMap resource="exam/prodInfo/sql/prod.xml"/> -->
-	<!-- <sqlMap resource="exam/prodInfo/sql/prod.xml"/>-->
+	 <sqlMap resource="exam/prodInfo/sql/prod.xml"/>
+	 <sqlMap resource="exam/prodInfo/sql/prod.xml"/>
 	</sqlMapConfig>
 
 
