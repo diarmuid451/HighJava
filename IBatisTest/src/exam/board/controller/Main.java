@@ -7,10 +7,10 @@ import exam.board.VO.*;
 import exam.board.service.*;
 
 
-public class controller {
+public class Main {
 	private boardService boardS;
 	
-	public controller() {
+	public Main() {
 		boardS = boardServiceImpl.getInstance();
 	}
 	
@@ -225,8 +225,8 @@ private boolean getNo(int boardNo) {
 	}
 	
 	public static void main(String[] args) {
-		controller cont = new controller();
-		cont.start();
+		Main main = new Main();
+		main.start();
 	}
 }
 
